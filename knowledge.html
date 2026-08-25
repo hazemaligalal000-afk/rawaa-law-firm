@@ -1,0 +1,353 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>المعرفة القانونية | رواء للمحاماة والاستشارات القانونية</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-container": "#12211d",
+                "bronze-accent": "#A68966",
+                "surface-container-low": "#e6f8f1",
+                "subtle-border": "#E2E2D9",
+                "on-surface-variant": "#424846"
+        },
+        "fontFamily": {
+                "headline-lg": ["IBM Plex Serif"],
+                "body-lg": ["Work Sans"],
+                "naskh-display": ["IBM Plex Serif"],
+                "display-lg": ["IBM Plex Serif"],
+                "headline-md": ["IBM Plex Serif"],
+                "body-md": ["Work Sans"],
+                "label-caps": ["Work Sans"],
+                "display-lg-mobile": ["IBM Plex Serif"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+        body { background-color: #FDFCF8; color: #12211d; scroll-behavior: smooth; }
+        .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-bronze-accent selection:text-white">
+<!-- 1. HEADER -->
+<nav class="absolute top-0 w-full z-50 transition-all duration-300 ease-in-out border-b border-white/10 bg-primary-container/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 md:px-20 py-6 max-w-[1360px] mx-auto">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-3" href="index.html">
+<img alt="Rawaa Law Logo" class="h-12 w-auto" src="assets/rawaa-logo.png">
+</a>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="index.html">الرئيسية</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="index.html#about">من نحن</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="index.html#services">خدماتنا</a>
+<a class="text-white font-semibold border-b border-white pb-1 font-body-md text-sm" href="knowledge.html">المعرفة القانونية</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="index.html#contact">تواصل معنا</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2 border border-white/20 rounded px-3 py-1.5 cursor-pointer hover:border-white/50 transition-colors">
+<span class="text-white font-body-md text-sm">AR</span>
+<span class="text-white/50 mx-1">|</span>
+<span class="text-white/70 font-body-md text-sm hover:text-white transition-colors">EN</span>
+</div>
+<a class="hidden sm:inline-flex justify-center items-center gap-2 px-6 py-2.5 bg-bronze-accent/20 border border-bronze-accent text-bronze-accent rounded font-body-md text-sm hover:bg-bronze-accent hover:text-white transition-colors" href="index.html#contact">
+                    اطلب استشارة
+</a>
+<button id="mobileMenuOpen" class="lg:hidden text-white hover:text-bronze-accent transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenu" class="fixed inset-0 bg-primary-container z-[60] flex flex-col pt-24 px-8 opacity-0 pointer-events-none transition-opacity duration-300">
+    <button id="mobileMenuClose" class="absolute top-8 left-8 text-white hover:text-bronze-accent transition-colors">
+        <span class="material-symbols-outlined text-4xl" data-icon="close">close</span>
+    </button>
+    <div class="flex flex-col gap-10 text-right mt-12">
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="index.html">الرئيسية</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="index.html#about">من نحن</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="index.html#services">خدماتنا</a>
+        <a class="mobile-link text-white font-naskh-display text-4xl font-bold hover:text-bronze-accent transition-colors" href="knowledge.html">المعرفة القانونية</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="index.html#contact">تواصل معنا</a>
+    </div>
+    <div class="mt-auto mb-16">
+        <a class="mobile-link block w-full text-center py-5 bg-bronze-accent text-white rounded font-body-md font-bold text-xl shadow-lg hover:bg-white hover:text-primary-container transition-colors" href="index.html#contact">اطلب استشارة قانونية</a>
+    </div>
+</div>
+
+<!-- HERO SECTION -->
+<header class="relative w-full py-40 md:py-48 px-6 md:px-20 bg-primary-container overflow-hidden flex flex-col items-center justify-center text-center">
+    <div class="absolute inset-0 bg-[url('assets/hero-gavel.png')] bg-cover bg-center opacity-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-primary-container via-primary-container/80 to-primary-container"></div>
+    <div class="relative z-10 max-w-3xl mx-auto fade-in-up">
+        <span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-bronze-accent/20 border border-bronze-accent/50 text-bronze-accent font-body-md text-sm font-semibold tracking-wider">المدونة والمنشورات</span>
+        <h1 class="font-naskh-display text-5xl md:text-6xl text-white mb-6 font-bold leading-tight">المعرفة القانونية</h1>
+        <p class="font-body-md text-lg md:text-xl text-white/80 leading-relaxed">
+            مساحتك الموثوقة للاطلاع على أحدث الأنظمة، التشريعات، والدراسات القانونية التي تهم الأفراد والكيانات في المملكة العربية السعودية.
+        </p>
+    </div>
+</header>
+
+<!-- CONTENT SECTION -->
+<section class="w-full bg-[#FDFCF8] py-20 md:py-32 px-6 md:px-20">
+    <div class="max-w-[1360px] mx-auto">
+        <!-- Categories -->
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-16 fade-in-up delay-100">
+            <button class="px-6 py-2.5 bg-bronze-accent text-white font-body-md font-semibold text-sm rounded-full shadow-md transition-colors">الكل</button>
+            <button class="px-6 py-2.5 bg-white border border-subtle-border text-on-surface-variant hover:border-bronze-accent hover:text-bronze-accent font-body-md font-semibold text-sm rounded-full transition-colors">الشركات والأعمال</button>
+            <button class="px-6 py-2.5 bg-white border border-subtle-border text-on-surface-variant hover:border-bronze-accent hover:text-bronze-accent font-body-md font-semibold text-sm rounded-full transition-colors">أنظمة العمل</button>
+            <button class="px-6 py-2.5 bg-white border border-subtle-border text-on-surface-variant hover:border-bronze-accent hover:text-bronze-accent font-body-md font-semibold text-sm rounded-full transition-colors">العقارات والتركات</button>
+            <button class="px-6 py-2.5 bg-white border border-subtle-border text-on-surface-variant hover:border-bronze-accent hover:text-bronze-accent font-body-md font-semibold text-sm rounded-full transition-colors">الأنظمة الجديدة</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 fade-in-up delay-200">
+            
+            <!-- Article 1 -->
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-subtle-border hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
+                <div class="h-56 w-full bg-gradient-to-br from-primary-container to-[#1a2f29] relative overflow-hidden flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/20 text-7xl transform group-hover:scale-110 transition-transform duration-500" data-icon="corporate_fare">corporate_fare</span>
+                    <div class="absolute top-4 right-4 bg-white text-primary-container px-3 py-1 text-xs font-bold font-body-md rounded-full shadow">الشركات والأعمال</div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-on-surface-variant/70 text-sm font-body-md mb-4">
+                        <span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                        <span>15 أكتوبر 2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl text-primary-container font-bold mb-4 group-hover:text-bronze-accent transition-colors line-clamp-2">أبرز التعديلات الجديدة في نظام الشركات السعودي وتأثيرها</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-base mb-8 line-clamp-3">قراءة تحليلية لأهم التحديثات التشريعية التي طرأت على نظام الشركات في المملكة، وكيف يمكن للكيانات التجارية التوافق معها لضمان استمرارية الأعمال بفعالية.</p>
+                    <a href="#" class="mt-auto inline-flex items-center gap-2 text-bronze-accent font-bold font-body-md hover:text-primary-container transition-colors">
+                        اقرأ المزيد
+                        <span class="material-symbols-outlined text-sm rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-subtle-border hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
+                <div class="h-56 w-full bg-gradient-to-br from-[#2a3f39] to-primary-container relative overflow-hidden flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/20 text-7xl transform group-hover:scale-110 transition-transform duration-500" data-icon="gavel">gavel</span>
+                    <div class="absolute top-4 right-4 bg-white text-primary-container px-3 py-1 text-xs font-bold font-body-md rounded-full shadow">أنظمة العمل</div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-on-surface-variant/70 text-sm font-body-md mb-4">
+                        <span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                        <span>02 سبتمبر 2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl text-primary-container font-bold mb-4 group-hover:text-bronze-accent transition-colors line-clamp-2">حقوق والتزامات العامل وصاحب العمل في ظل نظام العمل المحدث</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-base mb-8 line-clamp-3">دليل مبسط لفهم الحقوق والواجبات التعاقدية، وآليات فض المنازعات العمالية وفقاً لأحدث اللوائح والقرارات الصادرة من وزارة الموارد البشرية.</p>
+                    <a href="#" class="mt-auto inline-flex items-center gap-2 text-bronze-accent font-bold font-body-md hover:text-primary-container transition-colors">
+                        اقرأ المزيد
+                        <span class="material-symbols-outlined text-sm rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-subtle-border hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
+                <div class="h-56 w-full bg-gradient-to-br from-[#12211d] to-[#0a1411] relative overflow-hidden flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/20 text-7xl transform group-hover:scale-110 transition-transform duration-500" data-icon="real_estate_agent">real_estate_agent</span>
+                    <div class="absolute top-4 right-4 bg-white text-primary-container px-3 py-1 text-xs font-bold font-body-md rounded-full shadow">العقارات والتركات</div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-on-surface-variant/70 text-sm font-body-md mb-4">
+                        <span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                        <span>20 أغسطس 2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl text-primary-container font-bold mb-4 group-hover:text-bronze-accent transition-colors line-clamp-2">الإجراءات القانونية المتبعة لقسمة التركات والتخارج</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-base mb-8 line-clamp-3">شرح وافٍ للخطوات العملية والقانونية لقسمة التركات بين الورثة رضائياً أو قضائياً، وأهمية التوثيق لتجنب النزاعات المستقبلية.</p>
+                    <a href="#" class="mt-auto inline-flex items-center gap-2 text-bronze-accent font-bold font-body-md hover:text-primary-container transition-colors">
+                        اقرأ المزيد
+                        <span class="material-symbols-outlined text-sm rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-subtle-border hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
+                <div class="h-56 w-full bg-gradient-to-br from-[#1b312b] to-[#12211d] relative overflow-hidden flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/20 text-7xl transform group-hover:scale-110 transition-transform duration-500" data-icon="copyright">copyright</span>
+                    <div class="absolute top-4 right-4 bg-white text-primary-container px-3 py-1 text-xs font-bold font-body-md rounded-full shadow">الشركات والأعمال</div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-on-surface-variant/70 text-sm font-body-md mb-4">
+                        <span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                        <span>05 يوليو 2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl text-primary-container font-bold mb-4 group-hover:text-bronze-accent transition-colors line-clamp-2">أهمية تسجيل العلامة التجارية وحماية الملكية الفكرية</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-base mb-8 line-clamp-3">تعرف على الخطوات النظامية لتسجيل علامتك التجارية في السعودية، وكيف تحمي أصولك الفكرية من التعدي والمنافسة غير المشروعة.</p>
+                    <a href="#" class="mt-auto inline-flex items-center gap-2 text-bronze-accent font-bold font-body-md hover:text-primary-container transition-colors">
+                        اقرأ المزيد
+                        <span class="material-symbols-outlined text-sm rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 5 -->
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-subtle-border hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
+                <div class="h-56 w-full bg-gradient-to-br from-primary-container to-[#1a2f29] relative overflow-hidden flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/20 text-7xl transform group-hover:scale-110 transition-transform duration-500" data-icon="balance">balance</span>
+                    <div class="absolute top-4 right-4 bg-white text-primary-container px-3 py-1 text-xs font-bold font-body-md rounded-full shadow">الأنظمة الجديدة</div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-on-surface-variant/70 text-sm font-body-md mb-4">
+                        <span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                        <span>18 يونيو 2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl text-primary-container font-bold mb-4 group-hover:text-bronze-accent transition-colors line-clamp-2">نظرة عامة على نظام الإفلاس والفرص التي يتيحها للشركات المتعثرة</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-base mb-8 line-clamp-3">يوفر نظام الإفلاس خيارات متعددة لتسوية الديون وإعادة التنظيم المالي. استكشف كيف يمكن لهذا النظام إنقاذ المشاريع الواعدة.</p>
+                    <a href="#" class="mt-auto inline-flex items-center gap-2 text-bronze-accent font-bold font-body-md hover:text-primary-container transition-colors">
+                        اقرأ المزيد
+                        <span class="material-symbols-outlined text-sm rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 6 -->
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg border border-subtle-border hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
+                <div class="h-56 w-full bg-gradient-to-br from-[#2a3f39] to-primary-container relative overflow-hidden flex items-center justify-center">
+                    <span class="material-symbols-outlined text-white/20 text-7xl transform group-hover:scale-110 transition-transform duration-500" data-icon="policy">policy</span>
+                    <div class="absolute top-4 right-4 bg-white text-primary-container px-3 py-1 text-xs font-bold font-body-md rounded-full shadow">الأنظمة الجديدة</div>
+                </div>
+                <div class="p-8 flex flex-col flex-1">
+                    <div class="flex items-center gap-2 text-on-surface-variant/70 text-sm font-body-md mb-4">
+                        <span class="material-symbols-outlined text-base" data-icon="calendar_today">calendar_today</span>
+                        <span>01 مايو 2026</span>
+                    </div>
+                    <h3 class="font-headline-md text-2xl text-primary-container font-bold mb-4 group-hover:text-bronze-accent transition-colors line-clamp-2">نظام حماية البيانات الشخصية: التزامات القطاع الخاص</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed text-base mb-8 line-clamp-3">مع دخول نظام حماية البيانات حيز النفاذ، يتوجب على الشركات الامتثال لاشتراطات جمع ومعالجة بيانات العملاء لدرء المخالفات.</p>
+                    <a href="#" class="mt-auto inline-flex items-center gap-2 text-bronze-accent font-bold font-body-md hover:text-primary-container transition-colors">
+                        اقرأ المزيد
+                        <span class="material-symbols-outlined text-sm rtl:rotate-180" data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-20 flex justify-center gap-3 fade-in-up delay-300">
+            <button class="w-12 h-12 rounded flex items-center justify-center bg-primary-container text-white font-bold hover:bg-bronze-accent transition-colors">1</button>
+            <button class="w-12 h-12 rounded flex items-center justify-center bg-white border border-subtle-border text-on-surface-variant font-bold hover:border-bronze-accent hover:text-bronze-accent transition-colors">2</button>
+            <button class="w-12 h-12 rounded flex items-center justify-center bg-white border border-subtle-border text-on-surface-variant font-bold hover:border-bronze-accent hover:text-bronze-accent transition-colors">
+                <span class="material-symbols-outlined rtl:rotate-180" data-icon="chevron_right">chevron_right</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- NEWSLETTER SECTION -->
+<section class="w-full bg-bronze-accent py-24 px-6 md:px-20 text-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-primary-container opacity-5"></div>
+    <div class="max-w-2xl mx-auto relative z-10">
+        <span class="material-symbols-outlined text-white text-5xl mb-6" data-icon="mark_email_read">mark_email_read</span>
+        <h2 class="font-naskh-display text-4xl text-white font-bold mb-6">اشترك في النشرة البريدية</h2>
+        <p class="font-body-md text-white/90 text-lg mb-10">احصل على أحدث التحديثات القانونية والتشريعية مباشرة في بريدك الإلكتروني.</p>
+        <form class="flex flex-col sm:flex-row gap-4 justify-center">
+            <input type="email" placeholder="أدخل بريدك الإلكتروني" required class="flex-1 max-w-sm px-6 py-4 rounded bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:border-white focus:bg-white/30 transition-all font-body-md text-lg">
+            <button type="submit" class="px-8 py-4 bg-primary-container text-white rounded font-body-md font-bold text-lg hover:bg-white hover:text-primary-container transition-colors">اشتراك الآن</button>
+        </form>
+    </div>
+</section>
+
+<!-- 11. FOOTER -->
+<footer class="w-full bg-white pt-24 pb-12 border-t border-subtle-border"> 
+<div class="max-w-[1360px] mx-auto px-6 md:px-20"> 
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20"> 
+<div class="md:col-span-4 flex flex-col items-start text-right"> 
+<a class="inline-block mb-8" href="index.html"> 
+<img alt="Rawaa Law Logo" class="h-12 w-auto" src="assets/rawaa-logo.png">
+</a> 
+<p class="font-body-md text-on-surface-variant text-base leading-relaxed mb-10"><span class="font-bold">من نحن</span><br> شركة مهنية تقدم خدمات قانونية واستشارية للأفراد والكيانات في المملكة العربية السعودية، وفق معايير مهنية تقوم على الدقة والالتزام وجودة الخدمة. </p> 
+<div class="flex gap-5"> 
+<a class="w-12 h-12 border border-primary-container/20 rounded-full flex items-center justify-center text-primary-container hover:bg-bronze-accent hover:text-white hover:border-bronze-accent transition-all" href="#"> <span class="font-body-md text-base">in</span> </a> 
+<a class="w-12 h-12 border border-primary-container/20 rounded-full flex items-center justify-center text-primary-container hover:bg-bronze-accent hover:text-white hover:border-bronze-accent transition-all" href="#"> <span class="font-body-md text-base">X</span> </a> 
+<a class="w-12 h-12 border border-primary-container/20 rounded-full flex items-center justify-center text-primary-container hover:bg-bronze-accent hover:text-white hover:border-bronze-accent transition-all" href="#"> <span class="material-symbols-outlined text-base" data-icon="chat">chat</span> </a> 
+</div> 
+</div> 
+<div class="md:col-span-2"> 
+<h4 class="font-headline-md text-primary-container text-xl mb-8 font-bold">روابط سريعة</h4> 
+<ul class="space-y-5"> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html">الرئيسية</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#about">من نحن</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#services">خدماتنا</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#location">موقعنا</a></li> 
+</ul> 
+</div> 
+<div class="md:col-span-3"> 
+<h4 class="font-headline-md text-primary-container text-xl mb-8 font-bold">خدماتنا</h4> 
+<ul class="space-y-5"> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#services">الشركات والأعمال</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#services">القضايا التجارية والمالية</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#services">العقود والاتفاقيات</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="index.html#services">الاستشارات القانونية</a></li> 
+</ul> 
+</div> 
+<div class="md:col-span-3"> 
+<h4 class="font-headline-md text-primary-container text-xl mb-8 font-bold">تواصل معنا</h4> 
+<ul class="space-y-6"> 
+<li class="flex items-start gap-4"> 
+<span class="material-symbols-outlined text-bronze-accent text-xl shrink-0" data-icon="location_on">location_on</span> 
+<span class="font-body-md text-on-surface-variant text-base">الرياض، المملكة العربية السعودية</span> 
+</li> 
+<li class="flex items-center gap-4"> 
+<span class="material-symbols-outlined text-bronze-accent text-xl shrink-0" data-icon="call">call</span> 
+<span class="font-body-md text-on-surface-variant text-base" dir="ltr">0500816464</span> 
+</li> 
+<li class="flex items-center gap-4"> 
+<span class="material-symbols-outlined text-bronze-accent text-xl shrink-0" data-icon="mail">mail</span> 
+<span class="font-body-md text-on-surface-variant text-base">info@legalahmed.com</span> 
+</li> 
+</ul> 
+</div> 
+</div> 
+<div class="w-full border-t border-subtle-border pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-right"> 
+<p class="font-body-md text-base text-on-surface-variant/60 hover:text-primary-container transition-colors"> 2026 © شركة رواء للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة. </p> 
+<div class="flex gap-8"> 
+<a class="font-body-md text-base text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">سياسة الخصوصية</a> 
+<a class="font-body-md text-base text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">الشروط والأحكام</a> 
+</div> 
+</div> 
+</div> 
+</footer>
+
+<script>
+    // Mobile Menu Logic
+    const mobileMenuOpen = document.getElementById('mobileMenuOpen');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+
+    if (mobileMenuOpen && mobileMenuClose && mobileMenu) {
+        mobileMenuOpen.addEventListener('click', openMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+</script>
+</body>
+</html>

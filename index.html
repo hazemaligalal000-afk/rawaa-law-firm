@@ -1,0 +1,798 @@
+<!DOCTYPE html><html dir="rtl" lang="ar" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>رواء للمحاماة والاستشارات القانونية</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-background": "#0f1e1a",
+                "tertiary": "#040606",
+                "tertiary-fixed": "#e2e2e2",
+                "primary": "#000604",
+                "on-secondary-fixed": "#261a00",
+                "on-secondary-fixed-variant": "#5b4308",
+                "on-primary-container": "#798a84",
+                "on-error": "#ffffff",
+                "on-secondary": "#ffffff",
+                "ivory-surface": "#FDFCF8",
+                "surface-container": "#e0f2eb",
+                "on-surface-variant": "#424846",
+                "on-primary-fixed": "#0f1e1a",
+                "on-tertiary-container": "#858687",
+                "surface-tint": "#52625d",
+                "on-tertiary": "#ffffff",
+                "surface-bright": "#ecfdf6",
+                "surface-container-highest": "#d5e6e0",
+                "on-tertiary-fixed-variant": "#454747",
+                "outline-variant": "#c2c8c4",
+                "surface": "#ecfdf6",
+                "on-primary-fixed-variant": "#3a4a45",
+                "bronze-accent": "#A68966",
+                "secondary-fixed": "#ffdea0",
+                "on-surface": "#0f1e1a",
+                "secondary": "#755a20",
+                "background": "#ecfdf6",
+                "surface-dim": "#ccded7",
+                "inverse-surface": "#24332f",
+                "surface-variant": "#d5e6e0",
+                "subtle-border": "#E2E2D9",
+                "secondary-fixed-dim": "#e5c27d",
+                "on-tertiary-fixed": "#1a1c1c",
+                "on-primary": "#ffffff",
+                "on-error-container": "#93000a",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-container": "#1d1f1f",
+                "error-container": "#ffdad6",
+                "error": "#ba1a1a",
+                "surface-container-low": "#e6f8f1",
+                "on-secondary-container": "#775d22",
+                "secondary-container": "#fdd891",
+                "inverse-on-surface": "#e3f5ee",
+                "surface-container-high": "#dbece5",
+                "surface-container-lowest": "#ffffff",
+                "inverse-primary": "#b9cac4",
+                "legal-black": "#0A0F0E",
+                "outline": "#737876",
+                "primary-fixed-dim": "#b9cac4",
+                "primary-container": "#12211d",
+                "primary-fixed": "#d5e6e0"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "section-gap": "160px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px",
+                "container-max": "1360px",
+                "unit": "8px"
+        },
+        "fontFamily": {
+                "headline-lg": ["IBM Plex Serif"],
+                "body-lg": ["Work Sans"],
+                "naskh-display": ["IBM Plex Serif"],
+                "display-lg": ["IBM Plex Serif"],
+                "headline-md": ["IBM Plex Serif"],
+                "body-md": ["Work Sans"],
+                "label-caps": ["Work Sans"],
+                "display-lg-mobile": ["IBM Plex Serif"]
+        }
+      }
+    }
+  }
+</script>
+<style>
+        body { background-color: #12211d; color: #ffffff; scroll-behavior: smooth; }
+        .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        /* hide scrollbar for details */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-bronze-accent selection:text-white">
+<!-- 1. HEADER -->
+<nav class="absolute top-0 w-full z-50 transition-all duration-300 ease-in-out border-b border-white/10 bg-primary-container/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-3" href="#top">
+<img alt="Rawaa Law Logo" class="h-12 w-auto" src="assets/rawaa-logo.png">
+</a>
+</div>
+<div class="hidden lg:flex items-center gap-8">
+<a class="text-white font-semibold border-b border-white pb-1 font-body-md text-sm" href="#top">الرئيسية</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="#about">من نحن</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="#services">خدماتنا</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="knowledge.html">المعرفة القانونية</a>
+<a class="text-white/70 transition-colors duration-300 hover:text-white font-body-md text-sm" href="#contact">تواصل معنا</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2 border border-white/20 rounded px-3 py-1.5 cursor-pointer hover:border-white/50 transition-colors">
+<span class="text-white font-body-md text-sm">AR</span>
+<span class="text-white/50 mx-1">|</span>
+<span class="text-white/70 font-body-md text-sm hover:text-white transition-colors">EN</span>
+</div>
+<a class="hidden sm:inline-flex justify-center items-center gap-2 px-6 py-2.5 bg-bronze-accent/20 border border-bronze-accent text-bronze-accent rounded font-body-md text-sm hover:bg-bronze-accent hover:text-white transition-colors" href="#contact">
+                    اطلب استشارة
+</a>
+<button id="mobileMenuOpen" class="lg:hidden text-white hover:text-bronze-accent transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenu" class="fixed inset-0 bg-primary-container z-[60] flex flex-col pt-24 px-8 opacity-0 pointer-events-none transition-opacity duration-300">
+    <button id="mobileMenuClose" class="absolute top-8 left-8 text-white hover:text-bronze-accent transition-colors">
+        <span class="material-symbols-outlined text-4xl" data-icon="close">close</span>
+    </button>
+    <div class="flex flex-col gap-10 text-right mt-12">
+        <a class="mobile-link text-white font-naskh-display text-4xl font-bold hover:text-bronze-accent transition-colors" href="#top">الرئيسية</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="#about">من نحن</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="#services">خدماتنا</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="knowledge.html">المعرفة القانونية</a>
+        <a class="mobile-link text-white/80 hover:text-bronze-accent font-naskh-display text-4xl transition-colors" href="#contact">تواصل معنا</a>
+    </div>
+    <div class="mt-auto mb-16">
+        <a class="mobile-link block w-full text-center py-5 bg-bronze-accent text-white rounded font-body-md font-bold text-xl shadow-lg hover:bg-white hover:text-primary-container transition-colors" href="#contact">اطلب استشارة قانونية</a>
+    </div>
+</div>
+
+<!-- 2. HERO -->
+<header id="top" class="relative w-full min-h-[100vh] md:min-h-[80vh] flex items-center justify-center pt-32 pb-16 px-margin-mobile md:px-margin-desktop bg-primary-container overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Premium executive law office in Riyadh" class="w-full h-full object-cover" src="assets/hero-gavel.png">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-container/90 via-primary-container/50 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto px-4 mt-8 md:mt-16 fade-in-up">
+<span class="inline-block px-4 py-1.5 mb-6 rounded-full bg-bronze-accent/20 border border-bronze-accent/50 text-bronze-accent font-body-md text-sm font-semibold tracking-wider">رواء للمحاماة والاستشارات القانونية</span>
+<h1 class="font-naskh-display text-5xl md:text-7xl text-white mb-6 font-bold leading-tight drop-shadow-lg">
+رؤية قانونية واضحة،<br><span class="text-bronze-accent">لنتائج مضمونة.</span>
+</h1>
+<p class="font-body-md text-lg md:text-2xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+نقدم خبرات قانونية متكاملة للشركات والأفراد، بمعايير مهنية عالية واهتمام بأدق التفاصيل لضمان حماية مصالحك وتحقيق أهدافك.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="px-8 py-4 bg-bronze-accent text-white rounded font-body-md font-bold text-lg hover:bg-white hover:text-primary-container transition-colors shadow-lg w-full sm:w-auto" href="#contact">اطلب استشارة قانونية</a>
+<a class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded font-body-md font-bold text-lg hover:bg-white/20 transition-colors w-full sm:w-auto" href="#services">اكتشف خدماتنا</a>
+</div>
+</div>
+</header>
+<!-- 4. CEO MESSAGE -->
+<section class="w-full bg-white py-20 md:py-32 px-margin-mobile md:px-margin-desktop relative">
+<div class="max-w-4xl mx-auto relative flex flex-col items-center">
+<span class="material-symbols-outlined text-bronze-accent/20 text-[80px] md:text-[120px] mb-4 md:mb-8 leading-none" data-icon="format_quote">format_quote</span>
+<div class="text-center relative z-10 px-4 md:px-8 border-r-2 border-bronze-accent pr-6 md:pr-10">
+<h2 class="font-naskh-display text-3xl md:text-4xl text-primary-container mb-8 md:mb-12 font-bold">كلمة الرئيس التنفيذي</h2>
+<p class="font-body-lg text-on-surface-variant leading-loose mb-10 md:mb-14 text-lg md:text-2xl font-light">
+                    لقد حظيت البيئة القانونية باهتمام بالغ من القيادة في المملكة العربية السعودية، وهي تشكل أحد المرتكزات الأساسية لرؤية السعودية 2030. ونشهد اليوم تطورًا مستمرًا في التشريعات والأنظمة والمنظومة العدلية. ومن منطلق التزامنا المهني، نعمل في رواء على تعزيز الوعي القانوني لدى المستفيد، وتمكينه من فهم المستجدات التشريعية والتنظيمية والتعامل معها بوعي ووضوح؛ بما يسهم في حماية الحقوق، ودعم القرارات، والمشاركة في بناء بيئة أعمال أكثر استقرارًا وازدهارًا.
+                </p>
+<div class="flex flex-col gap-2">
+<span class="font-body-md text-bronze-accent font-semibold text-lg"><span style="color: rgb(18, 33, 29); font-family: &quot;IBM Plex Serif&quot;; font-size: 30px;" class="">أ. أحمد العنزي</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. ABOUT RAWAA -->
+<section id="about" class="w-full bg-primary-container py-20 md:py-32 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16 md:mb-24">
+<span class="font-body-md text-bronze-accent font-bold text-base tracking-widest block mb-4">من نحن</span>
+<h2 class="font-naskh-display text-4xl md:text-5xl text-white mb-6 md:mb-8 font-bold leading-tight">خبرة قانونية تقوم على الثقة والدقة.</h2>
+<p class="font-body-lg text-white/80 leading-relaxed max-w-4xl mx-auto text-lg md:text-xl px-2">
+                    تأسست رواء للمحاماة والاستشارات القانونية في مدينة الرياض عام 2017، لتقديم خدمات قانونية متخصصة للأفراد والكيانات وفق معايير مهنية ترتكز على الدقة والالتزام وفهم احتياجات العميل. ومنذ انطلاقتنا، نعمل على تطوير خدماتنا ومواكبة التحولات التشريعية والتنظيمية في المملكة العربية السعودية، وبناء علاقات مهنية طويلة الأمد تقوم على الثقة وجودة العمل القانوني. نسعى إلى تقديم معالجة قانونية واضحة وعملية تساعد عملاءنا على فهم مراكزهم القانونية، وإدارة المخاطر، واتخاذ القرارات المناسبة وفق الأنظمة ذات الصلة.
+                </p>
+</div>
+<div class="relative pt-16 max-w-5xl mx-auto">
+<div class="absolute top-20 right-0 left-0 h-[1px] bg-bronze-accent/30 hidden md:block"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="relative text-center">
+<div class="w-3 h-3 bg-bronze-accent rounded-full mx-auto mb-6 relative z-10 hidden md:block"></div>
+<span class="block font-headline-md text-bronze-accent text-4xl mb-4 font-bold">2017</span>
+<h4 class="font-body-md text-white/80 text-lg">انطلاق الكيان القانوني في مدينة الرياض.</h4>
+</div>
+<div class="relative text-center">
+<div class="w-3 h-3 bg-bronze-accent rounded-full mx-auto mb-6 relative z-10 hidden md:block"></div>
+<span class="block font-headline-md text-bronze-accent text-4xl mb-4 font-bold">2019</span>
+<h4 class="font-body-md text-white/80 text-lg">توسّع نطاق الأعمال والخدمات القانونية.</h4>
+</div>
+<div class="relative text-center">
+<div class="w-3 h-3 bg-bronze-accent rounded-full mx-auto mb-6 relative z-10 hidden md:block"></div>
+<span class="block font-headline-md text-bronze-accent text-4xl mb-4 font-bold">2021</span>
+<h4 class="font-body-md text-white/80 text-lg">التحول إلى شركة مهنية وتطوير الهيكل المؤسسي.</h4>
+</div>
+<div class="relative text-center">
+<div class="w-3 h-3 bg-bronze-accent rounded-full mx-auto mb-6 relative z-10 hidden md:block"></div>
+<span class="block font-headline-md text-bronze-accent text-4xl mb-4 font-bold">2025</span>
+<h4 class="font-body-md text-white/80 text-lg">مرحلة جديدة في تطوير الهوية والخدمات وتجربة العملاء.</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SERVICES -->
+<section class="w-full bg-white py-20 md:py-32 px-margin-mobile md:px-margin-desktop" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-center mb-12 md:mb-20">
+<div class="inline-flex flex-col sm:flex-row bg-surface-container-low rounded-xl sm:rounded p-2 border border-subtle-border gap-2 sm:gap-0 w-full sm:w-auto">
+<button id="btn-companies" class="w-full sm:w-auto px-6 md:px-10 py-4 bg-primary-container text-white font-body-md font-bold text-base md:text-lg rounded shadow-sm transition-colors">خدمات الشركات</button>
+<button id="btn-individuals" class="w-full sm:w-auto px-6 md:px-10 py-4 bg-transparent text-on-surface-variant border border-transparent hover:border-subtle-border font-body-md text-base md:text-lg transition-colors sm:ml-2 rounded">خدمات الأفراد</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+<div class="lg:col-span-4 space-y-6 md:space-y-8 text-right order-1 lg:order-1 relative">
+<span class="font-body-md text-bronze-accent font-bold text-base tracking-widest">خدماتنا</span>
+<h2 class="font-naskh-display text-4xl md:text-5xl text-primary-container leading-tight font-bold">حلول قانونية<br>مصممة لاحتياجاتك</h2>
+<p class="font-body-lg text-on-surface-variant leading-relaxed text-lg md:text-xl">
+                        نقدم لك حلولاً قانونية متخصصة وفق أعلى المعايير المهنية، بخبرة عميقة وتركيز كامل على حماية مصالحك وتحقيق أفضل النتائج
+                    </p>
+</div>
+<div class="lg:col-span-4 order-2 lg:order-2">
+<div id="companies-services" class="space-y-0 border-t-2 border-subtle-border block">
+    <details class="group bg-white border-b-2 border-subtle-border" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">01</span>
+                <span class="font-bold">الشركات والأعمال</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            تأسيس الشركات، الحوكمة، وإعادة الهيكلة.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="الشركات والأعمال">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">02</span>
+                <span class="font-bold">القضايا التجارية والمالية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            تمثيل قانوني احترافي وحلول فعالة.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="القضايا التجارية والمالية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">03</span>
+                <span class="font-bold">العقود التجارية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            صياغة ومراجعة العقود بمهنية عالية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="العقود التجارية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">04</span>
+                <span class="font-bold">القضايا الضريبية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            استشارات وحلول متخصصة في الشأن الضريبي.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="القضايا الضريبية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">05</span>
+                <span class="font-bold">نظام العمل</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            حلول قانونية تحمي الحقوق وتحقق التوازن.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="نظام العمل">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">06</span>
+                <span class="font-bold">الاستثمار</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            دعم قانوني لعمليات الاستثمار وتأسيس الكيانات.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="الاستثمار">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">07</span>
+                <span class="font-bold">الملكية الفكرية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            حماية حقوق الابتكار والأصول غير الملموسة.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="الملكية الفكرية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">08</span>
+                <span class="font-bold">التمويل والبنوك</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            استشارات قانونية في القطاع المالي والمصرفي.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="التمويل والبنوك">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">09</span>
+                <span class="font-bold">التحكيم</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            حلول بديلة لتسوية المنازعات التجارية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="التحكيم">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">10</span>
+                <span class="font-bold">الإفلاس</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            معالجة الأوضاع المالية والتعثر للكيانات التجارية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="الإفلاس">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+</div>
+
+<div id="individuals-services" class="space-y-0 border-t-2 border-subtle-border hidden">
+    <details class="group bg-white border-b-2 border-subtle-border" open>
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">01</span>
+                <span class="font-bold">القضايا الجزائية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            دراسة الوقائع ومتابعة الإجراءات النظامية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="القضايا الجزائية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">02</span>
+                <span class="font-bold">الجرائم المعلوماتية والتشهير</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            المحتوى الرقمي والتشهير والأدلة الإلكترونية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="الجرائم المعلوماتية والتشهير">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">03</span>
+                <span class="font-bold">قضايا الفساد المالي والإداري</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            القضايا ذات الصلة بالفساد المالي والإداري.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="قضايا الفساد المالي والإداري">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">04</span>
+                <span class="font-bold">قضايا المخدرات والمؤثرات العقلية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            دراسة الوقائع والأدلة والإجراءات النظامية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="قضايا المخدرات والمؤثرات العقلية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">05</span>
+                <span class="font-bold">التركات</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            تنظيم القسمة وتسوية المنازعات بين الورثة.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="التركات">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">06</span>
+                <span class="font-bold">القضايا العقارية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            الملكية والإيجار والعقود والتصرفات العقارية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="القضايا العقارية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">07</span>
+                <span class="font-bold">الأحوال الشخصية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            الزواج والطلاق والحضانة والنفقة والزيارة.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="الأحوال الشخصية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+    <details class="group bg-white border-b-2 border-subtle-border">
+        <summary class="flex justify-between items-center cursor-pointer list-none font-headline-md text-xl text-primary-container py-6 hover:bg-surface-container-low/50 transition-colors">
+            <div class="flex items-center gap-4">
+                <span class="text-bronze-accent/50 text-2xl font-bold font-naskh-display">08</span>
+                <span class="font-bold">المنازعات والقضايا الإدارية</span>
+            </div>
+            <span class="material-symbols-outlined text-bronze-accent transition-transform group-open:rotate-45 text-xl" data-icon="add">add</span>
+        </summary>
+        <div class="pb-6 text-on-surface-variant font-body-md pr-12 text-lg leading-relaxed">
+            القرارات الإدارية والتعويض والعقود الإدارية.
+            <a class="block mt-4 text-bronze-accent font-bold hover:text-primary-container transition-colors service-cta" href="#contact" data-service="المنازعات والقضايا الإدارية">اطلب استشارة في هذه الخدمة ←</a>
+        </div>
+    </details>
+</div>
+</div>
+<div class="lg:col-span-4 order-3 lg:order-3 flex justify-center items-center">
+<img alt="Rawaa Law Branding" class="w-full rounded shadow-2xl object-cover h-auto" src="assets/services-branding.png">
+</div>
+</div>
+</div>
+</section>
+<!-- 7. BRAND STATEMENT -->
+<section class="w-full py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/statement-bg.png');">
+  <div class="absolute inset-0 bg-primary-container/40"></div>
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h2 class="font-naskh-display text-4xl md:text-5xl text-white leading-tight mb-10 font-bold">
+      القانون ليس مجرد <span class="text-bronze-accent">إجراءات</span>،<br>بل <span class="text-bronze-accent">قرارات</span> تصنع مستقبل أعمالك.
+    </h2>
+  </div>
+</section>
+<!-- 9. MAP SECTION -->
+<section class="w-full bg-white py-32 px-margin-mobile md:px-margin-desktop" id="location">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+<div class="lg:col-span-5 text-right">
+<h2 class="font-naskh-display text-5xl text-primary-container mb-12 font-bold">موقعنا</h2>
+<div class="space-y-10 mb-14">
+<div class="flex items-center gap-8 justify-start">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 border border-bronze-accent/20">
+<span class="material-symbols-outlined text-bronze-accent text-2xl" data-icon="location_on">location_on</span>
+</div>
+<p class="font-body-md text-primary-container text-xl font-semibold">الرياض، المملكة العربية السعودية</p>
+</div>
+<div class="flex items-center gap-8 justify-start">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 border border-bronze-accent/20">
+<span class="material-symbols-outlined text-bronze-accent text-2xl" data-icon="call">call</span>
+</div>
+<p class="font-body-md text-primary-container text-xl font-semibold" dir="ltr">0500816464</p>
+</div>
+<div class="flex items-center gap-8 justify-start">
+<div class="w-14 h-14 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 border border-bronze-accent/20">
+<span class="material-symbols-outlined text-bronze-accent text-2xl" data-icon="mail">mail</span>
+</div>
+<p class="font-body-md text-primary-container text-xl font-semibold">info@legalahmed.com</p>
+</div>
+</div>
+<a class="inline-flex justify-center items-center gap-3 w-full sm:w-auto px-10 py-5 bg-bronze-accent text-white rounded font-body-md font-bold text-lg hover:bg-primary-container transition-colors shadow-lg" href="#">
+                    عرض الموقع على خرائط Google
+                    <span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<div class="lg:col-span-7">
+<div class="relative h-[400px] md:h-[600px] rounded overflow-hidden shadow-2xl border border-subtle-border">
+<div class="absolute inset-0 bg-[url('https://maps.googleapis.com/maps/api/staticmap?center=Riyadh&amp;zoom=12&amp;size=800x800&amp;maptype=roadmap&amp;style=feature:all|element:labels.text.fill|color:0x333333&amp;style=feature:all|element:labels.text.stroke|color:0xffffff&amp;style=feature:landscape|element:all|color:0xf5f5f5&amp;style=feature:poi|element:all|visibility:off&amp;style=feature:road|element:geometry|color:0xffffff&amp;style=feature:road|element:labels.icon|visibility:off&amp;style=feature:water|element:all|color:0xe0e0e0&amp;sensor=false')] bg-cover bg-center"></div>
+<div class="absolute inset-0 bg-primary-container/5"></div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none px-4 md:px-0">
+<div class="bg-white px-6 md:px-10 py-6 md:py-8 rounded-lg shadow-2xl flex flex-col md:flex-row items-center gap-4 md:gap-6 border-2 border-bronze-accent/30 w-full max-w-sm md:max-w-none md:w-auto">
+<span class="material-symbols-outlined text-bronze-accent text-4xl" data-icon="location_on">location_on</span>
+<div class="text-center md:text-right border-t-2 md:border-t-0 md:border-r-2 border-subtle-border pt-4 md:pt-0 md:pr-6">
+<img alt="Rawaa Law Logo" class="h-10 w-auto mb-2 mx-auto md:mx-0" src="assets/rawaa-logo.png">
+<span class="block font-body-md text-on-surface-variant text-base">للمحاماة والاستشارات القانونية</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. CONSULTATION FORM -->
+<section class="w-full bg-primary-container py-20 md:py-32 px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="max-w-5xl mx-auto">
+<div class="text-center mb-12 md:mb-16">
+<h2 class="font-naskh-display text-4xl md:text-5xl text-white mb-6 font-bold leading-tight">ابدأ باستشارة واضحة.</h2>
+<p class="font-body-md text-white/80 text-lg md:text-xl px-4">شاركنا تفاصيل احتياجك القانوني، وسيتواصل معك فريقنا لدراسة الطلب وتحديد الخطوة المناسبة.</p>
+</div>
+<form id="consultationForm" class="bg-primary-container/40 border border-white/10 rounded-2xl p-8 md:p-14 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none"></div>
+<div class="relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+        <div>
+            <label class="block font-body-md text-white/90 mb-3 text-base font-semibold" for="fullName">الاسم الكامل</label>
+            <input class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-lg placeholder-white/30 focus:outline-none focus:border-bronze-accent focus:ring-1 focus:ring-bronze-accent focus:bg-white/10 hover:border-white/30 transition-all" id="fullName" placeholder="أدخل اسمك الكامل" type="text" required>
+        </div>
+        <div>
+            <label class="block font-body-md text-white/90 mb-3 text-base font-semibold" for="phone">رقم الجوال</label>
+            <input class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-lg placeholder-white/30 focus:outline-none focus:border-bronze-accent focus:ring-1 focus:ring-bronze-accent focus:bg-white/10 hover:border-white/30 transition-all" dir="ltr" id="phone" placeholder="05x xxx xxxx" type="tel" required>
+        </div>
+    </div>
+    
+    <div class="mb-10">
+        <label class="block font-body-md text-white/90 mb-3 text-base font-semibold" for="email">البريد الإلكتروني</label>
+        <input class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-lg placeholder-white/30 focus:outline-none focus:border-bronze-accent focus:ring-1 focus:ring-bronze-accent focus:bg-white/10 hover:border-white/30 transition-all" dir="ltr" id="email" placeholder="example@email.com" type="email" required>
+    </div>
+
+    <div class="mb-10">
+        <label class="block font-body-md text-white/90 mb-4 text-base font-semibold">حدد قطاع الخدمة</label>
+        <div class="p-1.5 rounded-xl bg-white/5 border border-white/10 flex flex-col sm:flex-row gap-2 mb-6">
+            <label class="cursor-pointer flex-1">
+                <input type="radio" name="clientType" value="companies" class="peer sr-only" required>
+                <div class="flex items-center justify-center gap-3 px-6 py-4 rounded-lg peer-checked:bg-bronze-accent peer-checked:text-white text-white/60 font-body-md text-lg transition-all hover:text-white hover:bg-white/5 peer-checked:shadow-lg font-bold">
+                    <span class="material-symbols-outlined" data-icon="corporate_fare">corporate_fare</span>
+                    الشركات والأعمال
+                </div>
+            </label>
+            <label class="cursor-pointer flex-1">
+                <input type="radio" name="clientType" value="individuals" class="peer sr-only">
+                <div class="flex items-center justify-center gap-3 px-6 py-4 rounded-lg peer-checked:bg-bronze-accent peer-checked:text-white text-white/60 font-body-md text-lg transition-all hover:text-white hover:bg-white/5 peer-checked:shadow-lg font-bold">
+                    <span class="material-symbols-outlined" data-icon="person">person</span>
+                    الأفراد
+                </div>
+            </label>
+        </div>
+        
+        <div id="serviceTypeContainer" class="hidden opacity-0 transition-all duration-500 transform translate-y-4">
+            <label class="block font-body-md text-white/90 mb-3 text-base font-semibold" for="serviceType">نوع الخدمة المطلوب</label>
+            <div class="relative">
+                <select class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-lg appearance-none focus:outline-none focus:border-bronze-accent focus:ring-1 focus:ring-bronze-accent focus:bg-white/10 hover:border-white/30 transition-all [&>option]:bg-primary-container" id="serviceType" required>
+                    <option disabled selected value="">اختر الخدمة...</option>
+                    <!-- Populated by JS -->
+                </select>
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-bronze-accent pointer-events-none" data-icon="expand_more">expand_more</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mb-12">
+        <label class="block font-body-md text-white/90 mb-3 text-base font-semibold" for="details">تفاصيل الاستشارة</label>
+        <textarea class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white text-lg placeholder-white/30 focus:outline-none focus:border-bronze-accent focus:ring-1 focus:ring-bronze-accent focus:bg-white/10 hover:border-white/30 transition-all resize-y" id="details" placeholder="يرجى كتابة تفاصيل موضوع الاستشارة باختصار..." rows="5" required></textarea>
+    </div>
+
+<button class="w-full py-5 bg-bronze-accent text-white rounded font-body-md font-bold text-xl hover:bg-white hover:text-primary-container transition-colors shadow-lg mb-6" type="submit">إرسال الطلب</button>
+<div class="text-center">
+<a class="inline-flex items-center gap-2 text-bronze-accent hover:text-white transition-colors font-body-md text-lg mb-4" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                    التحدث مع المختص مباشرة عبر واتساب
+                </a>
+<p class="font-body-md text-white/50 text-sm">بإرسال الطلب، فإنك تقر باطلاعك على سياسة الخصوصية وتوافق على معالجة بياناتك لغرض التواصل ودراسة طلب الاستشارة.</p>
+</div>
+<div id="formStatus" class="mt-4 text-bronze-accent text-center hidden">تم إرسال طلبك بنجاح!</div>
+</form>
+</div>
+</section>
+<!-- 11. FOOTER -->
+<footer class="w-full bg-white pt-24 pb-12 border-t border-subtle-border"> 
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"> 
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20"> 
+<div class="md:col-span-4 flex flex-col items-start text-right"> 
+<a class="inline-block mb-8" href="#"> 
+<img alt="Rawaa Law Logo" class="h-12 w-auto" src="assets/rawaa-logo.png">
+</a> 
+<p class="font-body-md text-on-surface-variant text-base leading-relaxed mb-10"><span class="font-bold">من نحن</span><br> شركة مهنية تقدم خدمات قانونية واستشارية للأفراد والكيانات في المملكة العربية السعودية، وفق معايير مهنية تقوم على الدقة والالتزام وجودة الخدمة. </p> 
+<div class="flex gap-5"> 
+<a class="w-12 h-12 border border-primary-container/20 rounded-full flex items-center justify-center text-primary-container hover:bg-bronze-accent hover:text-white hover:border-bronze-accent transition-all" href="#"> <span class="font-body-md text-base">in</span> </a> 
+<a class="w-12 h-12 border border-primary-container/20 rounded-full flex items-center justify-center text-primary-container hover:bg-bronze-accent hover:text-white hover:border-bronze-accent transition-all" href="#"> <span class="font-body-md text-base">X</span> </a> 
+<a class="w-12 h-12 border border-primary-container/20 rounded-full flex items-center justify-center text-primary-container hover:bg-bronze-accent hover:text-white hover:border-bronze-accent transition-all" href="#"> <span class="material-symbols-outlined text-base" data-icon="chat">chat</span> </a> 
+</div> 
+</div> 
+<div class="md:col-span-2"> 
+<h4 class="font-headline-md text-primary-container text-xl mb-8 font-bold">روابط سريعة</h4> 
+<ul class="space-y-5"> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#top">الرئيسية</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#about">من نحن</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#services">خدماتنا</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#location">موقعنا</a></li> 
+</ul> 
+</div> 
+<div class="md:col-span-3"> 
+<h4 class="font-headline-md text-primary-container text-xl mb-8 font-bold">خدماتنا</h4> 
+<ul class="space-y-5"> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#">الشركات والأعمال</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#">القضايا التجارية والمالية</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#">العقود والاتفاقيات</a></li> 
+<li class=""><a class="font-body-md text-on-surface-variant hover:text-bronze-accent transition-colors text-base" href="#">الاستشارات القانونية</a></li> 
+</ul> 
+</div> 
+<div class="md:col-span-3"> 
+<h4 class="font-headline-md text-primary-container text-xl mb-8 font-bold">تواصل معنا</h4> 
+<ul class="space-y-6"> 
+<li class="flex items-start gap-4"> 
+<span class="material-symbols-outlined text-bronze-accent text-xl shrink-0" data-icon="location_on">location_on</span> 
+<span class="font-body-md text-on-surface-variant text-base">الرياض، المملكة العربية السعودية</span> 
+</li> 
+<li class="flex items-center gap-4"> 
+<span class="material-symbols-outlined text-bronze-accent text-xl shrink-0" data-icon="call">call</span> 
+<span class="font-body-md text-on-surface-variant text-base" dir="ltr">0500816464</span> 
+</li> 
+<li class="flex items-center gap-4"> 
+<span class="material-symbols-outlined text-bronze-accent text-xl shrink-0" data-icon="mail">mail</span> 
+<span class="font-body-md text-on-surface-variant text-base">info@legalahmed.com</span> 
+</li> 
+</ul> 
+</div> 
+</div> 
+<div class="w-full border-t border-subtle-border pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-right"> 
+<p class="font-body-md text-base text-on-surface-variant/60 hover:text-primary-container transition-colors"> 2026 © شركة رواء للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة. </p> 
+<div class="flex gap-8"> 
+<a class="font-body-md text-base text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">سياسة الخصوصية</a> 
+<a class="font-body-md text-base text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">الشروط والأحكام</a> 
+</div> 
+</div> 
+</div> 
+</footer>
+<script>
+    const tabs = [document.getElementById('btn-companies'), document.getElementById('btn-individuals')];
+    const serviceSelect = document.getElementById('serviceType');
+    const companiesContainer = document.getElementById('companies-services');
+    const individualsContainer = document.getElementById('individuals-services');
+
+    const formServiceData = {
+        companies: [
+            'الشركات والأعمال', 'القضايا التجارية والمالية', 'العقود التجارية', 'القضايا الضريبية',
+            'نظام العمل', 'الاستثمار', 'الملكية الفكرية', 'التمويل والبنوك', 'التحكيم', 'الإفلاس'
+        ],
+        individuals: [
+            'القضايا الجزائية', 'الجرائم المعلوماتية والتشهير', 'قضايا الفساد المالي والإداري',
+            'قضايا المخدرات والمؤثرات العقلية', 'التركات', 'القضايا العقارية', 'الأحوال الشخصية',
+            'المنازعات والقضايا الإدارية'
+        ]
+    };
+    const clientTypeRadios = document.querySelectorAll('input[name="clientType"]');
+    const serviceTypeContainer = document.getElementById('serviceTypeContainer');
+
+    function updateServiceDropdown(type) {
+        serviceSelect.innerHTML = '<option disabled selected value="">اختر الخدمة...</option>';
+        formServiceData[type].forEach(name => {
+            const option = document.createElement('option');
+            option.value = name;
+            option.textContent = name;
+            serviceSelect.appendChild(option);
+        });
+        serviceTypeContainer.classList.remove('hidden');
+        // small delay for transition
+        setTimeout(() => serviceTypeContainer.classList.remove('opacity-0', 'translate-y-4'), 50);
+    }
+
+    clientTypeRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => updateServiceDropdown(e.target.value));
+    });
+
+    function bindAccordion() {
+        const detailsElements = document.querySelectorAll('details');
+        detailsElements.forEach(targetDetail => {
+            targetDetail.addEventListener('click', (e) => {
+                if(e.target.closest('a')) return;
+                
+                detailsElements.forEach(detail => {
+                    if (detail !== targetDetail && detail.parentElement === targetDetail.parentElement) {
+                        detail.removeAttribute('open');
+                    }
+                });
+            });
+        });
+
+        const ctas = document.querySelectorAll('.service-cta');
+        ctas.forEach(cta => {
+            cta.addEventListener('click', (e) => {
+                const serviceName = cta.dataset.service;
+                let clientType = 'companies';
+                if (formServiceData.individuals.includes(serviceName)) {
+                    clientType = 'individuals';
+                }
+                document.querySelector(`input[name="clientType"][value="${clientType}"]`).checked = true;
+                updateServiceDropdown(clientType);
+                serviceSelect.value = serviceName;
+            });
+        });
+    }
+
+    bindAccordion();
+
+    // Tab interaction
+    tabs[0].addEventListener('click', () => {
+        tabs[0].className = "px-10 py-4 bg-primary-container text-white font-body-md font-bold text-lg rounded shadow-sm transition-colors";
+        tabs[1].className = "px-10 py-4 bg-white text-on-surface-variant border border-transparent hover:border-subtle-border font-body-md text-lg transition-colors ml-2 rounded";
+        companiesContainer.classList.remove('hidden');
+        companiesContainer.classList.add('block');
+        individualsContainer.classList.add('hidden');
+        individualsContainer.classList.remove('block');
+    });
+    tabs[1].addEventListener('click', () => {
+        tabs[1].className = "px-10 py-4 bg-primary-container text-white font-body-md font-bold text-lg rounded shadow-sm transition-colors ml-2";
+        tabs[0].className = "px-10 py-4 bg-white text-on-surface-variant border border-transparent hover:border-subtle-border font-body-md text-lg transition-colors rounded";
+        individualsContainer.classList.remove('hidden');
+        individualsContainer.classList.add('block');
+        companiesContainer.classList.add('hidden');
+        companiesContainer.classList.remove('block');
+    });
+
+    // Basic form submission simulation
+    document.getElementById('consultationForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.getElementById('formStatus').classList.remove('hidden');
+    });
+
+    // Mobile Menu Logic
+    const mobileMenuOpen = document.getElementById('mobileMenuOpen');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function openMenu() {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        document.body.style.overflow = '';
+    }
+
+    if (mobileMenuOpen && mobileMenuClose && mobileMenu) {
+        mobileMenuOpen.addEventListener('click', openMenu);
+        mobileMenuClose.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
+</script>
+</body>
+</html>
